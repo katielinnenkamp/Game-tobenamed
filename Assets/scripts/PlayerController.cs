@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Mathematics;
+using UnityEngine.UIElements;
 
 public class playerMove : MonoBehaviour
-{
-    
+{    
     [SerializeField]
     private float movespeed; //movement speed; can be freely modified and will apply automatically
     [SerializeField]
@@ -23,6 +23,10 @@ public class playerMove : MonoBehaviour
 
     private Inventory inventory = new Inventory(5); //player inventory tracker, holds current items
 
+    private VisualElement uidoc;
+    [SerializeField]
+    private GameObject UI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -35,6 +39,16 @@ public class playerMove : MonoBehaviour
         lookup = 0f;
 
         cam = Camera.main;
+
+        if(UI.TryGetComponent<UIDocument>(out var temp))
+        {
+            /*uidoc = temp.rootVisualElement;
+            selectedname = uidoc.Q<Label>("selected_name");*/
+        }
+        else
+        {
+            Debug.Log("UI doc not found...");
+        }
     }
 
     bool Grounded()
@@ -120,6 +134,17 @@ public class playerMove : MonoBehaviour
                     inventory.RemoveItem(inventory.NumItems() - 1);
                 }
             }
+            if(Keyboard.current.iKey.wasPressedThisFrame)
+            {
+                if(notinmenu)
+                {
+                    OpenInventory();
+                }
+                else
+                {
+                    CloseInventory();
+                }
+            }
         }
     }
     private float vertspeed;
@@ -163,5 +188,18 @@ public class playerMove : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void OpenInventory()
+    {
+        notinmenu = false;
+
+
+    }
+    void CloseInventory()
+    {
+        notinmenu = true;
+
+
     }
 }
