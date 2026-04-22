@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class Pickup : Interactable
 {
     [SerializeField]
     private Item item_form;

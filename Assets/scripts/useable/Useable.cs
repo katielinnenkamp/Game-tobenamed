@@ -7,7 +7,7 @@ public struct key_use_pair
     public bool consumed;
 }
 
-public abstract class Interactable : MonoBehaviour
+public abstract class Useable : Interactable
 {
     [SerializeField]
     protected key_use_pair[] keys;

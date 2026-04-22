@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class door : Interactable
+public class door : Useable
 {
     public bool opened = false;
     [SerializeField]

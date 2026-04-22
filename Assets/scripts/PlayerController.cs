@@ -30,6 +30,11 @@ public class playerMove : MonoBehaviour
     [SerializeField]
     private GameObject UI;
 
+    [SerializeField]
+    private GameObject righthand;
+    [SerializeField]
+    private GameObject lefthand;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -107,6 +112,10 @@ public class playerMove : MonoBehaviour
         }
 
         return vel;
+    }
+    private void ChangeHeld()
+    {
+
     }
 
     private float yrotation;
@@ -186,7 +195,7 @@ public class playerMove : MonoBehaviour
                     helditem = inventory.GetItem(heldindex);
                 }
             }
-            else if(hit.collider.TryGetComponent<Interactable>(out var obj))
+            else if(hit.collider.TryGetComponent<Useable>(out var obj))
             {
                 obj.Interact(helditem);
             }
