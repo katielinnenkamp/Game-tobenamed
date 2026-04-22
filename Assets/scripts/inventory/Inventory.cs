@@ -51,8 +51,10 @@ public class Inventory
     {
         return items[index];
     }
-    public void RemoveItem(int index)
+    public Item RemoveItem(int index)
     {
+        Item ret = items[index];
         items.Remove(items[index]);
+        return ret;
     }
 }

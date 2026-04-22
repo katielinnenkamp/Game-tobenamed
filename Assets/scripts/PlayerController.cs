@@ -21,6 +21,9 @@ public class playerMove : MonoBehaviour
     [SerializeField]
     private float gravity = 18f; //gravity; higher gravity feels less floaty
 
+    [SerializeField]
+    private Item helditem;
+    private int heldindex;
     private Inventory inventory = new Inventory(5); //player inventory tracker, holds current items
 
     private VisualElement uidoc;
@@ -123,27 +126,24 @@ public class playerMove : MonoBehaviour
             cam.transform.rotation = Quaternion.Euler(lookup, yrotation, 0f);
             if(Keyboard.current.eKey.wasPressedThisFrame)
             {
-                TryPickup();
+                TryInteract();
             }
             //debug test drop
-            if(Keyboard.current.fKey.wasPressedThisFrame)
+            if(Keyboard.current.qKey.wasPressedThisFrame)
             {
-                if(inventory.NumItems() > 0)
-                {
-                    Instantiate(inventory.GetItem(inventory.NumItems() - 1).item_prefab, transform.position + (Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward), Quaternion.identity);
-                    inventory.RemoveItem(inventory.NumItems() - 1);
-                }
+                DropItem(heldindex);
+                
             }
-            if(Keyboard.current.iKey.wasPressedThisFrame)
+        }
+        if(Keyboard.current.iKey.wasPressedThisFrame)
+        {
+            if(notinmenu)
             {
-                if(notinmenu)
-                {
-                    OpenInventory();
-                }
-                else
-                {
-                    CloseInventory();
-                }
+                OpenInventory();
+            }
+            else
+            {
+                CloseInventory();
             }
         }
     }
@@ -170,17 +170,25 @@ public class playerMove : MonoBehaviour
         }
     }
     
-    float maxpickupdist = 2f;
-    bool TryPickup()
+    float maxinteractdist = 2f;
+    bool TryInteract()
     {
         RaycastHit hit;
-        if(Physics.Raycast(cam.transform.position, Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward, out hit, maxpickupdist))
+        if(Physics.Raycast(cam.transform.position, Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward, out hit, maxinteractdist))
         
         if(hit.collider != null)
         {
             if(hit.collider.TryGetComponent<Pickup>(out var item)) 
             {
-                item.Grab(inventory);
+                if(item.Grab(inventory))
+                {
+                    heldindex = inventory.NumItems() - 1;
+                    helditem = inventory.GetItem(heldindex);
+                }
+            }
+            else if(hit.collider.TryGetComponent<Interactable>(out var obj))
+            {
+                obj.Interact(helditem);
             }
             else
             {
@@ -188,6 +196,41 @@ public class playerMove : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void DropItem(int ind)
+    {
+        if(inventory.NumItems() > 0)
+        {
+            Instantiate(RemoveItem(ind).item_prefab, 
+                transform.position + (Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward), 
+                Quaternion.identity);
+        }
+        else
+        {
+            return;
+        }
+        
+    }
+    Item RemoveItem(int ind)
+    {
+        if(ind >= inventory.NumItems())
+        {
+            return null;
+        }
+        if(inventory.NumItems() == 1)
+        {
+            heldindex = -1;
+            helditem = null;
+        }
+        else if(heldindex >= ind)
+        {
+            heldindex--;
+            helditem = inventory.GetItem(heldindex);
+        }
+        Item ret = inventory.GetItem(ind);
+        inventory.RemoveItem(ind);
+        return ret;
     }
 
     void OpenInventory()
@@ -201,5 +244,5 @@ public class playerMove : MonoBehaviour
         notinmenu = true;
 
 
-    }
+    }   
 }
