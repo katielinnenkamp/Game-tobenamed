@@ -9,7 +9,7 @@ public class questGiver : Useable
     public override void Activate(int keyused)
     {
         Instantiate(reward.item_prefab, 
-                transform.position + new Vector3(0.5f, 0f, 0.5f), 
+                transform.position + new Vector3(1f, 0f,-1f), 
                 Quaternion.identity);
     }
 }
