@@ -7,4 +7,10 @@ public class Item : ScriptableObject
     public string item_name;
     [SerializeField]
     public GameObject item_prefab;
+    public Sprite icon;
+
+    public virtual void Use(GameObject user)
+    {
+        return;
+    }
 }
