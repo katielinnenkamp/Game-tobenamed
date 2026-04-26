@@ -220,7 +220,7 @@ public class playerMove : MonoBehaviour
                 airtimer = 0f;
             }
         }
-
+    
         //not currently implemented
         /*if(Keyboard.current.iKey.wasPressedThisFrame)
         {
@@ -301,7 +301,7 @@ public class playerMove : MonoBehaviour
 
     void DropItem(int ind)
     {
-        if(inventory.NumItems() > 0 && inventory.NumItems() > ind && !inventory.SlotEmpty(ind))
+        if(inventory.NumItems() > 0 && !inventory.SlotEmpty(ind))
         {
             Instantiate(RemoveItem(ind).item_prefab, 
                 transform.position + (Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward), 
@@ -317,10 +317,6 @@ public class playerMove : MonoBehaviour
     //TODO this is public so interactables can take ingredients and keys when you use them, probably come up with a better solution
     public Item RemoveItem(int ind)
     {
-        if(ind >= inventory.NumItems())
-        {
-            return null;
-        }
         Item ret;
         inventory.TryGetItem(ind, out ret);
         inventory.RemoveItem(ind);
