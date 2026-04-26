@@ -10,7 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3297167510831944547}
   - component: {fileID: 1343019742877265546}
+<<<<<<< Updated upstream
   - component: {fileID: -6510582142565058804}
+=======
+<<<<<<< HEAD
+  - component: {fileID: -8369435911232341030}
+=======
+  - component: {fileID: -6510582142565058804}
+>>>>>>> 7a3161df1474dbfa0588361abd1555875e6d8df5
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Candle Light 01
   m_TagString: Untagged
@@ -98,7 +106,15 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+<<<<<<< Updated upstream
 --- !u!114 &-6510582142565058804
+=======
+<<<<<<< HEAD
+--- !u!114 &-8369435911232341030
+=======
+--- !u!114 &-6510582142565058804
+>>>>>>> 7a3161df1474dbfa0588361abd1555875e6d8df5
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
