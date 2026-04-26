@@ -6813,13 +6813,9 @@ MonoBehaviour:
   movespeed: 5
   moveref: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gravity: 18
-<<<<<<< Updated upstream
-  jumppower: 0
-  maxairtime: 0
-=======
+
   jumppower: 7
   maxairtime: 0.2
->>>>>>> Stashed changes
   UI: {fileID: 92495844}
   righthand: {fileID: 0}
   lefthand: {fileID: 0}
