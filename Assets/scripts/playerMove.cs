@@ -20,6 +20,11 @@ public class playerMove : MonoBehaviour
 
     [SerializeField]
     private float gravity = 18f; //gravity; higher gravity feels less floaty
+    [SerializeField]
+    private float jumppower;
+    [SerializeField]
+    private float maxairtime;
+    private float airtimer = 0f;
 
     private int heldindex = 0;
     private int hotbarslots = 6;
@@ -108,6 +113,17 @@ public class playerMove : MonoBehaviour
             return false;
         }
     }
+    bool HitHead()
+    {
+        if(Physics.Raycast(transform.position, Vector3.up, 1.0625f))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     private float movex;
     private float movey;
@@ -159,6 +175,7 @@ public class playerMove : MonoBehaviour
     private float yrotation;
     private float lookup;
     private bool notinmenu;
+    private bool groundedonupdate;
     // Update is called once per frame
     void Update()
     {
@@ -180,7 +197,30 @@ public class playerMove : MonoBehaviour
             {
                 DropItem(heldindex);
             }
+            groundedonupdate = Grounded();
+            //jump
+            if(Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                if(groundedonupdate || airtimer < maxairtime)
+                {
+                    airtimer = maxairtime + 1f;
+                    vertspeed = jumppower;
+                }
+            }
+            //grounding check
+            if(!groundedonupdate)
+            {
+                if(airtimer <= maxairtime)
+                {
+                    airtimer += Time.deltaTime;
+                }
+            }
+            else
+            {
+                airtimer = 0f;
+            }
         }
+
         //not currently implemented
         /*if(Keyboard.current.iKey.wasPressedThisFrame)
         {

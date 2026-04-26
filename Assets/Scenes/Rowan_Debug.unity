@@ -767,6 +767,8 @@ MonoBehaviour:
   movespeed: 5
   moveref: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gravity: 18
+  jumppower: 7
+  maxairtime: 0.2
   UI: {fileID: 908785911}
   righthand: {fileID: 155244629}
   lefthand: {fileID: 1082080345}
