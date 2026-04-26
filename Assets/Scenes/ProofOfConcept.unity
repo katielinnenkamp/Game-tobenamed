@@ -689,15 +689,15 @@ RectTransform:
   m_GameObject: {fileID: 169379594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1728504, y: 3.416485, z: 2.1728504}
+  m_LocalScale: {x: 0.460225, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 802272185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 177}
+  m_SizeDelta: {x: 1000, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169379596
 MonoBehaviour:
@@ -749,14 +749,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2643,7 +2643,7 @@ RectTransform:
   m_GameObject: {fileID: 802272184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.460225, y: 0.2926985, z: 0.460225}
+  m_LocalScale: {x: 1, y: 0.5, z: 0.460225}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 169379595}
@@ -2651,7 +2651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -24.7}
+  m_AnchoredPosition: {x: 0, y: 34}
   m_SizeDelta: {x: 417.5, y: 319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802272186
@@ -5443,7 +5443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -29}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652044621
@@ -6970,7 +6970,11 @@ MonoBehaviour:
   movespeed: 5
   moveref: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gravity: 18
+  jumppower: 0
+  maxairtime: 0
   UI: {fileID: 92495844}
+  righthand: {fileID: 0}
+  lefthand: {fileID: 0}
 --- !u!136 &2079781055
 CapsuleCollider:
   m_ObjectHideFlags: 0
