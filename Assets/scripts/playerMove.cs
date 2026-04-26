@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using UnityEngine.UIElements;
 
 public class playerMove : MonoBehaviour
-{    
+{
     [SerializeField]
     private float movespeed; //movement speed; can be freely modified and will apply automatically
     [SerializeField]
@@ -21,10 +21,16 @@ public class playerMove : MonoBehaviour
     [SerializeField]
     private float gravity = 18f; //gravity; higher gravity feels less floaty
 
-    [SerializeField]
-    private Item helditem;
-    private int heldindex;
-    private Inventory inventory = new Inventory(5); //player inventory tracker, holds current items
+    private int heldindex = 0;
+    private int hotbarslots = 6;
+    private Inventory inventory = new Inventory(6); //player inventory tracker, holds current items
+    private VisualElement slot0;
+    private VisualElement slot1;
+    private VisualElement slot2;
+    private VisualElement slot3;
+    private VisualElement slot4;
+    private VisualElement slot5;
+    private VisualElement[] icons = new VisualElement[6];
 
     private VisualElement uidoc;
     [SerializeField]
@@ -34,6 +40,8 @@ public class playerMove : MonoBehaviour
     private GameObject righthand;
     [SerializeField]
     private GameObject lefthand;
+
+    public MyInputActions controls;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -48,15 +56,45 @@ public class playerMove : MonoBehaviour
 
         cam = Camera.main;
 
+        controls = new MyInputActions();
+
+        controls.Enable();
+
         if(UI.TryGetComponent<UIDocument>(out var temp))
         {
-            /*uidoc = temp.rootVisualElement;
-            selectedname = uidoc.Q<Label>("selected_name");*/
-        }
+            uidoc = temp.rootVisualElement;
+            //selectedname = uidoc.Q<Label>("selected_name");
+            slot0 = uidoc.Q<VisualElement>("slot0");
+            slot1 = uidoc.Q<VisualElement>("slot1");
+            slot2 = uidoc.Q<VisualElement>("slot2");
+            slot3 = uidoc.Q<VisualElement>("slot3");
+            slot4 = uidoc.Q<VisualElement>("slot4");
+            slot5 = uidoc.Q<VisualElement>("slot5");
+
+            icons[0] = slot0.Q<VisualElement>("icon");
+            icons[1] = slot1.Q<VisualElement>("icon");
+            icons[2] = slot2.Q<VisualElement>("icon");
+            icons[3] = slot3.Q<VisualElement>("icon");
+            icons[4] = slot4.Q<VisualElement>("icon");
+            icons[5] = slot5.Q<VisualElement>("icon");
+
+            controls.Hotbar.SelectSlot1.performed += lamb => TryChangeHeld(0);
+            controls.Hotbar.SelectSlot2.performed += lamb => TryChangeHeld(1);
+            controls.Hotbar.SelectSlot3.performed += lamb => TryChangeHeld(2);
+            controls.Hotbar.SelectSlot4.performed += lamb => TryChangeHeld(3);
+            controls.Hotbar.SelectSlot5.performed += lamb => TryChangeHeld(4);
+            controls.Hotbar.SelectSlot6.performed += lamb => TryChangeHeld(5);
+
+            controls.Player.Attack.performed += UseHeld;
+            
+            UpdateUI();
+        }   
         else
         {
             Debug.Log("UI doc not found...");
         }
+
+
     }
 
     bool Grounded()
@@ -141,10 +179,10 @@ public class playerMove : MonoBehaviour
             if(Keyboard.current.qKey.wasPressedThisFrame)
             {
                 DropItem(heldindex);
-                
             }
         }
-        if(Keyboard.current.iKey.wasPressedThisFrame)
+        //not currently implemented
+        /*if(Keyboard.current.iKey.wasPressedThisFrame)
         {
             if(notinmenu)
             {
@@ -154,7 +192,10 @@ public class playerMove : MonoBehaviour
             {
                 CloseInventory();
             }
-        }
+        }*/
+        //HandleNumberKeys();
+        //HandleScrollWheel();
+
     }
     private float vertspeed;
     void FixedUpdate()
@@ -178,6 +219,21 @@ public class playerMove : MonoBehaviour
             vertspeed = 0f;
         }
     }
+
+    //TODO update to input manager
+    void HandleScrollWheel()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (Mathf.Approximately(scroll, 0f)) return;
+
+
+        // Scroll down = next slot, scroll up = previous, wrapping around
+        int next = scroll < 0
+            ? (heldindex + 1) % hotbarslots
+            : (heldindex - 1 + hotbarslots) % hotbarslots;
+
+        TryChangeHeld(next);
+    }
     
     float maxinteractdist = 2f;
     bool TryInteract()
@@ -189,15 +245,11 @@ public class playerMove : MonoBehaviour
         {
             if(hit.collider.TryGetComponent<Pickup>(out var item)) 
             {
-                if(item.Grab(inventory))
-                {
-                    heldindex = inventory.NumItems() - 1;
-                    helditem = inventory.GetItem(heldindex);
-                }
+                AddToInventory(item);
             }
             else if(hit.collider.TryGetComponent<Useable>(out var obj))
             {
-                obj.Interact(helditem);
+                obj.Interact(heldindex, inventory, this);
             }
             else
             {
@@ -209,7 +261,7 @@ public class playerMove : MonoBehaviour
 
     void DropItem(int ind)
     {
-        if(inventory.NumItems() > 0)
+        if(inventory.NumItems() > 0 && inventory.NumItems() > ind && !inventory.SlotEmpty(ind))
         {
             Instantiate(RemoveItem(ind).item_prefab, 
                 transform.position + (Quaternion.Euler(lookup, yrotation, 0f) * Vector3.forward), 
@@ -217,41 +269,117 @@ public class playerMove : MonoBehaviour
         }
         else
         {
+            UpdateUI();
             return;
         }
-        
+        UpdateUI();
     }
-    Item RemoveItem(int ind)
+    //TODO this is public so interactables can take ingredients and keys when you use them, probably come up with a better solution
+    public Item RemoveItem(int ind)
     {
         if(ind >= inventory.NumItems())
         {
             return null;
         }
-        if(inventory.NumItems() == 1)
-        {
-            heldindex = -1;
-            helditem = null;
-        }
-        else if(heldindex >= ind)
-        {
-            heldindex--;
-            helditem = inventory.GetItem(heldindex);
-        }
-        Item ret = inventory.GetItem(ind);
+        Item ret;
+        inventory.TryGetItem(ind, out ret);
         inventory.RemoveItem(ind);
+        UpdateUI();
         return ret;
+    }
+    void AddToInventory(Pickup item)
+    {
+        item.Grab(inventory);
+        UpdateUI();
+    }
+
+    Item GetHeldItem()
+    {
+        Item ret;
+        if(inventory.TryGetItem(heldindex, out ret))
+        {
+            return ret;
+        }
+        return null;
+    }
+    bool TryChangeHeld(int ind)
+    {
+        if(ind < hotbarslots){
+            heldindex = ind;
+            UpdateUI();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     void OpenInventory()
     {
         notinmenu = false;
 
-
+        UpdateUI();
     }
     void CloseInventory()
     {
         notinmenu = true;
 
+        UpdateUI();
+    } 
 
-    }   
+    void UpdateUI()
+    {
+        //selection updating
+        slot0.RemoveFromClassList("slot-selected");
+        slot1.RemoveFromClassList("slot-selected");
+        slot2.RemoveFromClassList("slot-selected");
+        slot3.RemoveFromClassList("slot-selected");
+        slot4.RemoveFromClassList("slot-selected");
+        slot5.RemoveFromClassList("slot-selected");
+        switch(heldindex)
+        {
+            case 0:
+                slot0.AddToClassList("slot-selected");
+                break;
+            case 1:
+                slot1.AddToClassList("slot-selected");
+                break;
+            case 2:
+                slot2.AddToClassList("slot-selected");
+                break;
+            case 3:
+                slot3.AddToClassList("slot-selected");
+                break;
+            case 4:
+                slot4.AddToClassList("slot-selected");
+                break;
+            case 5:
+                slot5.AddToClassList("slot-selected");
+                break;
+        }
+        
+        int slots = inventory.GetSlots();
+        for(int i = 0; i < slots; i++)
+        {
+            icons[i].style.backgroundImage = StyleKeyword.None;
+        }
+        for(int i = 0; i < slots; i++)
+        {
+            Item temp;
+            if(inventory.TryGetItem(i, out temp))
+            {
+                icons[i].style.backgroundImage = new StyleBackground(temp.icon);
+            }
+        }
+    }  
+
+    void UseHeld(InputAction.CallbackContext ctx)
+    {
+        Item held = GetHeldItem();
+        if(held != null)
+        {
+            held.Use(gameObject);
+        }
+        return;
+    }
 }

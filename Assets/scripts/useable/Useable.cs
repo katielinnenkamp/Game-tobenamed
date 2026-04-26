@@ -14,12 +14,18 @@ public abstract class Useable : Interactable
     [SerializeField]
     protected bool no_key;
 
-    public bool Interact(Item useditem)
+    public bool Interact(int useditemind, Inventory inventory, playerMove user)
     {
         for(int i = 0; i < keys.Length; i++)
         {
-            if(useditem == keys[i].key)
+            Item used;
+            inventory.TryGetItem(useditemind, out used);
+            if(used == keys[i].key)
             {
+                if(keys[i].consumed)
+                {
+                    user.RemoveItem(useditemind);
+                }
                 Activate(i);
                 return true;
             }
