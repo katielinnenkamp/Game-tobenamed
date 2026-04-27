@@ -47,6 +47,8 @@ public class playerMove : MonoBehaviour
     private GameObject lefthand;
 
     public MyInputActions controls;
+    private AudioSource m_Walking;
+    private AudioSource m_Pickup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -55,6 +57,10 @@ public class playerMove : MonoBehaviour
 
         bounds = GetComponent<Collider>().bounds;
         bounds.Expand(-2 * skinwidth);
+
+        var m_Sources = GetComponents<AudioSource>();
+        m_Walking = m_Sources[0];
+        m_Pickup = m_Sources[1];
 
         yrotation = 0f;
         lookup = 0f;
@@ -210,6 +216,7 @@ public class playerMove : MonoBehaviour
             //grounding check
             if(!groundedonupdate)
             {
+                m_Walking.Stop();
                 if(airtimer <= maxairtime)
                 {
                     airtimer += Time.deltaTime;
@@ -258,6 +265,23 @@ public class playerMove : MonoBehaviour
         {
             vertspeed = 0f;
         }
+        
+        //walking sfx
+        bool hasHorizontalInput = !Mathf.Approximately (movex * Time.deltaTime * movespeed, 0f);
+        bool hasVerticalInput = !Mathf.Approximately (movey * Time.deltaTime * movespeed, 0f);
+        bool isWalking = hasHorizontalInput || hasVerticalInput;
+
+        if (isWalking)
+        {
+            if (!m_Walking.isPlaying && Grounded())
+            {
+                m_Walking.Play();
+            }
+        }
+        else
+        {
+            m_Walking.Pause();        
+        }
     }
 
     //TODO update to input manager
@@ -285,6 +309,7 @@ public class playerMove : MonoBehaviour
         {
             if(hit.collider.TryGetComponent<Pickup>(out var item)) 
             {
+                m_Pickup.Play();
                 AddToInventory(item);
             }
             else if(hit.collider.TryGetComponent<Useable>(out var obj))
