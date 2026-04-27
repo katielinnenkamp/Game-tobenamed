@@ -1354,7 +1354,7 @@ MonoBehaviour:
   keys:
   - key: {fileID: 11400000, guid: ee0cf508fa26c4012b36026bc0c63934, type: 2}
     consumed: 1
-  no_key: 1
+  no_key: 0
   dialogBox: {fileID: 433180049}
   reward: {fileID: 11400000, guid: 8f11c41c4a20c44b49bfb5df198d3b57, type: 2}
 --- !u!4 &330712448 stripped
