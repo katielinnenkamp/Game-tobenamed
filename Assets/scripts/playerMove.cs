@@ -17,6 +17,7 @@ public class playerMove : MonoBehaviour
     private Bounds bounds;
 
     private float sensitivity = 1f; //sensitivity of mouse movement
+    private bool _isLocked = true;
 
     [SerializeField]
     private float gravity = 18f; //gravity; higher gravity feels less floaty
@@ -53,8 +54,6 @@ public class playerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        notinmenu = true; //TODO ensure player doesn't startin the menu or pause screen, thus messing this up
-
         bounds = GetComponent<Collider>().bounds;
         bounds.Expand(-2 * skinwidth);
 
@@ -106,6 +105,27 @@ public class playerMove : MonoBehaviour
         }
 
 
+    }
+
+    public void LockCursor()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+        _isLocked = true;
+    }
+
+    public void UnlockCursor()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+        _isLocked = false;
+    }
+
+    // Re-lock when the game regains focus (tab switch, etc.)
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus && _isLocked)
+            LockCursor();
     }
 
     bool Grounded()
@@ -180,13 +200,12 @@ public class playerMove : MonoBehaviour
 
     private float yrotation;
     private float lookup;
-    private bool notinmenu;
     private bool groundedonupdate;
     // Update is called once per frame
     void Update()
     {
         //wrap in boolean to disable when inside of a menu
-        if(notinmenu)
+        if(_isLocked)
         {
             Vector2 mousedelt = Mouse.current.delta.ReadValue();
             yrotation += mousedelt.x * sensitivity;
@@ -228,10 +247,9 @@ public class playerMove : MonoBehaviour
             }
         }
     
-        //not currently implemented
-        /*if(Keyboard.current.iKey.wasPressedThisFrame)
+        if(Keyboard.current.iKey.wasPressedThisFrame)
         {
-            if(notinmenu)
+            if(!_isLocked)
             {
                 OpenInventory();
             }
@@ -239,7 +257,7 @@ public class playerMove : MonoBehaviour
             {
                 CloseInventory();
             }
-        }*/
+        }
         //HandleNumberKeys();
         //HandleScrollWheel();
 
@@ -377,13 +395,13 @@ public class playerMove : MonoBehaviour
 
     void OpenInventory()
     {
-        notinmenu = false;
+        LockCursor();
 
         UpdateUI();
     }
     void CloseInventory()
     {
-        notinmenu = true;
+        UnlockCursor();
 
         UpdateUI();
     } 
