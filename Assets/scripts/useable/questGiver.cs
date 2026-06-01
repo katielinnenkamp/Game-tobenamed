@@ -14,6 +14,9 @@ public class questGiver : Useable
     [SerializeField]
     private GameObject rewardspot;
 
+    [SerializeField]
+    private GameObject key;
+
     void Start()
     {
         dialogBox.SetActive(false);
@@ -49,6 +52,10 @@ public class questGiver : Useable
             Instantiate(reward.item_prefab,
                     rewardspot.transform.position,
                     Quaternion.identity);
+        }
+        else if (key)
+        {
+            key.SetActive(true);
         }
     }
 }
