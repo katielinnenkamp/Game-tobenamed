@@ -334,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMove
   movespeed: 3
+  sprintmultiplier: 1.3
   moveref: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gravity: 18
   jumppower: 5

@@ -10,6 +10,8 @@ public class playerMove : MonoBehaviour
     [SerializeField]
     private float movespeed; //movement speed; can be freely modified and will apply automatically
     [SerializeField]
+    private float sprintmultiplier;
+    [SerializeField]
     private InputActionReference moveref; //movement reference; must be assigned and unchanged
     private Camera cam; //camera; assigned to main camera automatically (should be the only camera in the scene)
 
@@ -61,6 +63,8 @@ public class playerMove : MonoBehaviour
     private AudioManager _audioManager;
     private AudioSource m_Walking;
 
+    private float yrotation;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -75,7 +79,7 @@ public class playerMove : MonoBehaviour
         _audioManager = FindFirstObjectByType<AudioManager>();
         if (_audioManager == null) Debug.LogError("_audioManager is NULL");
 
-        yrotation = transform.rotation.y;
+        yrotation = transform.rotation.eulerAngles.y;
         lookup = 0f;
 
         cam = Camera.main;
@@ -269,7 +273,7 @@ public class playerMove : MonoBehaviour
     // Update handles input and look among other things
     // FixedUpdate handles movement among other things
     #region standard_updates
-    private float yrotation;
+    
     private float lookup;
     private bool groundedonupdate;
     // Update is called once per frame
@@ -327,6 +331,10 @@ public class playerMove : MonoBehaviour
                 airtimer = 0f;
             }
         }
+        else
+        {
+            //TODO escape to exit menus
+        }
     
         if(Keyboard.current.iKey.wasPressedThisFrame)
         {
@@ -341,12 +349,11 @@ public class playerMove : MonoBehaviour
         }
         //HandleNumberKeys();
         //HandleScrollWheel();
-
-
     }
     private float vertspeed;
     void FixedUpdate()
     {
+        groundedonupdate = Grounded();
         if (PauseMenuUI.GameIsPaused)
         {
             if (m_Walking != null)
@@ -366,12 +373,16 @@ public class playerMove : MonoBehaviour
                 CloseMenu();
             }
         }
+        if(Keyboard.current.shiftKey.isPressed && groundedonupdate)
+        {
+            movement *= sprintmultiplier;
+        }
         movement = Quaternion.Euler(0f, yrotation, 0f) * movement;
         this.transform.position += CollideAndSlide(movement, this.transform.position);
         //if we move, exit out of any menus we're in
         
         // fall if we're in the air, stop falling if we're on the ground
-        if(!Grounded())
+        if(!groundedonupdate)
         {
             vertspeed = 0f - Mathf.Min(-(vertspeed) + (Time.deltaTime * gravity), 55f);
         }
