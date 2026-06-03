@@ -59,6 +59,8 @@ public class anomalymanager : MonoBehaviour
 
     private List<anomalyscript> recentlyUsedAnomalies = new List<anomalyscript>();
 
+    private string newScene = "";
+
     void Awake()
     {
         movetimer = 0;
@@ -88,6 +90,12 @@ public class anomalymanager : MonoBehaviour
                 door.transform.localPosition = Vector3.MoveTowards(door.transform.localPosition, doorclosepos, doorspeed * Time.deltaTime);
                 if((door.transform.localPosition - doorclosepos).sqrMagnitude <= 0.01f)
                 {
+                    if (newScene != "")
+                    {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(newScene);
+                        return;
+                    }
+                    
                     ChangeState(amstate.MOVING);
                 }
                 break;
@@ -197,13 +205,15 @@ public class anomalymanager : MonoBehaviour
 
         if (currentfloor <= winfloor)
         {
-            WinGame();
+            newScene = "parkour";
+            ChangeState(amstate.DOORCLOSING);
             return;
         }
 
         if (currentfloor >= losefloor)
         {
-            LoseGame();
+            newScene = "FullGameLose";
+            ChangeState(amstate.DOORCLOSING);
             return;
         }
 
@@ -213,12 +223,20 @@ public class anomalymanager : MonoBehaviour
     private void WinGame()
     {
         Debug.Log("You reached B0, you win!");
+        if (GameFlowManager.instance != null)
+        {
+            GameFlowManager.instance.StartPlatformerGame();
+        }
         curstate = amstate.IDLE;
     }
 
     private void LoseGame()
     {
         Debug.Log("You reached B9, you lose!");
+        if (GameFlowManager.instance != null)
+        {
+            GameFlowManager.instance.LoseGame();
+        }
         curstate = amstate.IDLE;
     }
 

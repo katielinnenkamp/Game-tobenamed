@@ -56,7 +56,7 @@ public class GameFlowManager : MonoBehaviour
     public void CompleteAnomalyGame()
     {
         completedAnomalyGame = true;
-        SceneManager.LoadScene("AlphaBuild");
+        SceneManager.LoadScene("parkour");
     }
 
     public void StartPlatformerGame()
