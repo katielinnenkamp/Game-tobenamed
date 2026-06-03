@@ -27,6 +27,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource m_DoorOpen;
     [SerializeField] private AudioSource m_DoorClose;
 
+    [Header("Misc")]
+    [SerializeField] private AudioSource m_Splash;
+
     public void PlayRandomPickup()
     {
         //Set up and play an RNG clip index for our Pickup Source
@@ -38,7 +41,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRandomDrop()
     {
-        //Set up and play an RNG clip index for our Pickup Source
+        //Set up and play an RNG clip index for our Drop Source
         int clip = Random.Range(0, m_dropClips.Length);
         m_dropSource.pitch = Random.Range(0.9f, 1.1f);
         m_dropSource.PlayOneShot(m_dropClips[clip]);
