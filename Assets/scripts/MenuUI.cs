@@ -11,6 +11,7 @@ public class MenuUI : MonoBehaviour
         if (_audioManager == null) Debug.LogError("_audioManager is NULL");
         m_Menu = GameObject.Find("Menu").GetComponent<AudioSource>();
         if (m_Menu == null) Debug.LogError("m_Menu is NULL");
+        _audioManager.musToPlay("Main");
     }
     public void PlayFullGame()
     {
@@ -20,7 +21,7 @@ public class MenuUI : MonoBehaviour
 
     public void PlayGhostHouseOnly()
     {
-        m_Menu.Play();
+        m_Menu.Play();        
         GameFlowManager.instance.PlayGhostHouseOnly();
     }
 

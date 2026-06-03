@@ -8,6 +8,15 @@ public class GameFlowManager : MonoBehaviour
     public bool playingFullGame = false;
     public bool completedAnomalyGame = false;
     public bool hasOutsideKey = false;
+    private AudioManager _audioManager;
+    private string _pendingMusic = null;
+
+    private AudioManager GetAudio()
+    {
+        if (_audioManager == null)
+            _audioManager = FindFirstObjectByType<AudioManager>();
+        return _audioManager;
+    }
 
     private void Awake()
     {
@@ -16,9 +25,35 @@ public class GameFlowManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // After a scene loads, re-find AudioManager and play pending music
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        _audioManager = null; // Clear stale reference
+        if (_pendingMusic != null)
+        {
+            GetAudio()?.musToPlay(_pendingMusic);
+            _pendingMusic = null;
+        }
+    }
+
+    private void LoadSceneWithMusic(string scene, string music)
+    {
+        _pendingMusic = music;
+        SceneManager.LoadScene(scene);
     }
 
     public void StartFullGame()
@@ -26,52 +61,51 @@ public class GameFlowManager : MonoBehaviour
         playingFullGame = true;
         completedAnomalyGame = false;
         hasOutsideKey = false;
-
-        SceneManager.LoadScene("AlphaBuild");
+        LoadSceneWithMusic("AlphaBuild", "Cabin");
     }
 
     public void PlayGhostHouseOnly()
     {
         playingFullGame = false;
-        SceneManager.LoadScene("AlphaBuild");
+        LoadSceneWithMusic("AlphaBuild", "Cabin");
     }
 
     public void PlayAnomalyGameOnly()
     {
         playingFullGame = false;
-        SceneManager.LoadScene("anomaly");
+        LoadSceneWithMusic("anomaly", "Anomaly");
     }
 
     public void PlayPlatformerGameOnly()
     {
         playingFullGame = false;
-        SceneManager.LoadScene("parkour");
+        LoadSceneWithMusic("parkour", "Parkour");
     }
 
     public void EnterAnomalyGame()
     {
-        SceneManager.LoadScene("anomaly");
+        LoadSceneWithMusic("anomaly", "Anomaly");
     }
 
     public void CompleteAnomalyGame()
     {
         completedAnomalyGame = true;
-        SceneManager.LoadScene("parkour");
+        LoadSceneWithMusic("parkour", "Parkour");
     }
 
     public void StartPlatformerGame()
     {
-        SceneManager.LoadScene("parkour");
+        LoadSceneWithMusic("parkour", "Parkour");
     }
 
     public void WinGame()
     {
-        SceneManager.LoadScene("FullGameWin");
+        LoadSceneWithMusic("FullGameWin", "Win");
     }
 
     public void LoseGame()
     {
-        SceneManager.LoadScene("FullGameLose");
+        LoadSceneWithMusic("FullGameLose", "Lose");
     }
 
     public void ReturnToMainMenu()
@@ -79,7 +113,6 @@ public class GameFlowManager : MonoBehaviour
         playingFullGame = false;
         completedAnomalyGame = false;
         hasOutsideKey = false;
-
-        SceneManager.LoadScene("BetaBuildMenu");
+        LoadSceneWithMusic("BetaBuildMenu", "Main"); // "Title" → "Main" to match your switch
     }
 }

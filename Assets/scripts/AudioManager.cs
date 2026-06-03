@@ -32,8 +32,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource m_Splash; 
     [SerializeField] private AudioSource m_MenuMove;    
     [SerializeField] private AudioSource m_ButtonClick;
+    [SerializeField] private AudioSource m_Cheer;
 
-
+    [Header("Music")]
+    [SerializeField] private AudioSource bgm_Title;
+    [SerializeField] private AudioSource bgm_Win;
+    [SerializeField] private AudioSource bgm_Cabin;
+    [SerializeField] private AudioSource bgm_Parkour;
+    [SerializeField] private AudioSource bgm_Anomaly;
+    [SerializeField] private AudioSource bgm_Lose;
 
     [Header("Ghost")]
     [SerializeField] private AudioSource m_GhostFloat;
@@ -128,6 +135,43 @@ public class AudioManager : MonoBehaviour
     {
         m_GhostTalk.pitch = Random.Range(0.7f, 1.2f);
         m_GhostTalk.Play();
+    }
+
+
+    public void musToPlay(string Scene)
+    {
+        
+        AudioSource toPlay = Scene switch
+        {
+            "Main"   => bgm_Title,
+            "Cabin" => bgm_Cabin,
+            "Anomaly"   => bgm_Anomaly,
+            "Parkour"  => bgm_Parkour,
+            "Win" => bgm_Win,
+            "Lose" => bgm_Lose,
+            _        => bgm_Title  // fallback
+        };
+
+        if (toPlay == null)
+        {
+            return;
+        }
+
+        musToStop(toPlay);
+
+        if(!toPlay.isPlaying)
+        {
+            toPlay.Play();
+        }
+    }
+    private void musToStop(AudioSource sourceToKeep)
+    {
+        if(bgm_Title != null && bgm_Title != sourceToKeep) bgm_Title.Stop();
+        if(bgm_Cabin != null && bgm_Cabin != sourceToKeep) bgm_Cabin.Stop();
+        if(bgm_Anomaly != null && bgm_Anomaly != sourceToKeep) bgm_Anomaly.Stop();
+        if(bgm_Parkour != null && bgm_Parkour != sourceToKeep) bgm_Parkour.Stop();
+        if(bgm_Win != null && bgm_Win != sourceToKeep) bgm_Win.Stop();
+        if(bgm_Lose != null && bgm_Lose != sourceToKeep) bgm_Lose.Stop();
     }
 
 }
