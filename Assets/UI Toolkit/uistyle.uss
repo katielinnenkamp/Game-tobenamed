@@ -2,7 +2,8 @@
 }
 
 .slot.slot-selected {
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(255, 255, 255);
+    -unity-text-outline-color: rgb(255, 255, 255);
 }
 
 .slot {

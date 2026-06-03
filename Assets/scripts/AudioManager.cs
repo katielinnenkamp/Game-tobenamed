@@ -39,6 +39,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource m_GhostFloat;
     [SerializeField] private AudioSource m_GhostTalk;
 
+    void Awake()
+    {
+        StopWalking();
+    }
+
     public void PlayRandomPickup()
     {
         //Set up and play an RNG clip index for our Pickup Source
@@ -82,8 +87,25 @@ public class AudioManager : MonoBehaviour
             _        => m_hardwalk  // fallback
         };
 
-        if (!toPlay.isPlaying)
+        if (toPlay == null)
+        {
+            return;
+        }
+
+        StopWalkingExcept(toPlay);
+
+        if(!toPlay.isPlaying)
+        {
             toPlay.Play();
+        }
+    }
+
+    private void StopWalkingExcept(AudioSource sourceToKeep)
+    {
+        if(m_woodwalk != null && m_woodwalk != sourceToKeep) m_woodwalk.Stop();
+        if(m_carpetwalk != null && m_carpetwalk != sourceToKeep) m_carpetwalk.Stop();
+        if(m_hardwalk != null && m_hardwalk != sourceToKeep) m_hardwalk.Stop();
+        if(m_grasswalk != null && m_grasswalk != sourceToKeep) m_grasswalk.Stop();
     }
 
     public void StopWalking()
