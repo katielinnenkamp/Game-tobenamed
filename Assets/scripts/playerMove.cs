@@ -293,6 +293,12 @@ public class playerMove : MonoBehaviour
             return;
         }
 
+        if(!_isLocked && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            Debug.Log("hello");
+            CloseMenu();
+        }
+
         if(!_isLocked && openedmenu == null && Mouse.current.leftButton.wasPressedThisFrame && !PauseMenuUI.GameIsPaused)
         {
             LockCursor();
@@ -378,8 +384,9 @@ public class playerMove : MonoBehaviour
             {
                 CloseMenu();
             }
+            currentinteractable = null;
         }
-        if(Keyboard.current.shiftKey.isPressed && groundedonupdate)
+        if(Keyboard.current.shiftKey.isPressed)
         {
             movement *= sprintmultiplier;
         }

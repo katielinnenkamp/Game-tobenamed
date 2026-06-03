@@ -22,7 +22,7 @@
             </ui:VisualElement>
             <ui:Label text="" name="held_item_label" style="position: absolute; left: 0%; top: auto; color: rgb(255, 255, 255); align-self: stretch; align-items: center; opacity: 1; font-size: 25%; bottom: 105%; -unity-text-align: upper-center; right: 0%;"/>
         </ui:VisualElement>
-        <ui:VisualElement name="crosshair" style="flex-grow: 1; width: 1%; height: 1%; max-height: 1px; max-width: 1px; min-width: 1px; min-height: 1px; top: 33%; left: 50%; background-color: rgb(188, 188, 188); align-items: center; justify-content: center; align-self: stretch;"/>
+        <ui:VisualElement name="crosshair" style="flex-grow: 1; width: 3%; height: 3%; max-height: 1px; max-width: 1px; min-width: 1px; min-height: 1px; top: 50%; left: 50%; background-color: rgb(188, 188, 188); align-items: center; justify-content: center; align-self: stretch; position: absolute;"/>
         <ui:VisualElement name="itemtagcontainer" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: auto; align-items: center; justify-content: flex-end; align-self: center; align-content: center;">
             <ui:Label text="" name="itemtag" style="color: rgb(255, 255, 255); font-size: 25px; position: absolute;"/>
         </ui:VisualElement>
