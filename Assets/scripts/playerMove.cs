@@ -61,7 +61,6 @@ public class playerMove : MonoBehaviour
 
     public MyInputActions controls;
     private AudioManager _audioManager;
-    private AudioSource m_Walking;
 
     private float yrotation;
 
@@ -73,9 +72,6 @@ public class playerMove : MonoBehaviour
         bounds = GetComponent<Collider>().bounds;
         bounds.Expand(-2 * skinwidth);
 
-        m_Walking = GameObject.Find("Woodwalk").GetComponent<AudioSource>();
-        if (m_Walking == null) Debug.LogError("m_Walking is Null");
-        m_Walking.Stop();
         _audioManager = FindFirstObjectByType<AudioManager>();
         if (_audioManager == null) Debug.LogError("_audioManager is NULL");
 
@@ -207,6 +203,14 @@ public class playerMove : MonoBehaviour
             return false;
         }
     }
+
+    string GetSurfaceTag()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out var hit, 1.0625f))
+            return hit.collider.gameObject.tag;
+        return "Untagged";
+    }
+
     bool HitHead()
     {
         if(Physics.Raycast(transform.position, Vector3.up, 1.0625f))
@@ -320,7 +324,7 @@ public class playerMove : MonoBehaviour
             //grounding check
             if(!groundedonupdate)
             {
-                m_Walking.Stop();
+                _audioManager.StopWalking();
                 if(airtimer <= maxairtime)
                 {
                     airtimer += Time.deltaTime;
@@ -356,10 +360,7 @@ public class playerMove : MonoBehaviour
         groundedonupdate = Grounded();
         if (PauseMenuUI.GameIsPaused)
         {
-            if (m_Walking != null)
-            {
-                m_Walking.Pause();
-            }
+            _audioManager.PauseWalking();
             return;
         }
 
@@ -402,14 +403,14 @@ public class playerMove : MonoBehaviour
 
         if (isWalking)
         {
-            if (!m_Walking.isPlaying && Grounded())
+            if (Grounded())
             {
-                m_Walking.Play();
+                _audioManager.PlayWalking(GetSurfaceTag());
             }
         }
         else
         {
-            m_Walking.Pause();        
+            _audioManager.PauseWalking();        
         }
     }
     #endregion

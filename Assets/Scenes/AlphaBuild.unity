@@ -199,6 +199,10 @@ PrefabInstance:
       value: IntWoodFloor01 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -892,6 +896,10 @@ PrefabInstance:
       value: IntWoodFloor01 (38)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1012,6 +1020,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1228,6 +1240,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -2422,6 +2438,10 @@ PrefabInstance:
       value: IntWoodFloor01 (08)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3013,6 +3033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneFloor01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.6
@@ -3391,6 +3415,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -6169,6 +6197,10 @@ PrefabInstance:
       value: IntWoodFloor01 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6245,6 +6277,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -11133,6 +11169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -11567,6 +11607,10 @@ PrefabInstance:
       value: IntWoodFloor01 (36)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11713,6 +11757,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_Name
       value: StoneFloor01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12452,6 +12500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -12640,6 +12692,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13894,6 +13950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneFloor01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.1
@@ -14710,6 +14770,10 @@ PrefabInstance:
       value: IntWoodFloor01 (31)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -14869,6 +14933,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15586,6 +15654,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17139,6 +17211,10 @@ PrefabInstance:
       value: IntWoodFloor01 (06)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17326,6 +17402,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -18689,6 +18769,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20215,6 +20299,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -25916,6 +26004,10 @@ PrefabInstance:
       value: IntWoodFloor01 (41)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -26215,6 +26307,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_Name
       value: StoneFloor01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27257,6 +27353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -27454,6 +27554,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -27796,6 +27900,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -28384,6 +28492,10 @@ PrefabInstance:
       value: IntWoodFloor01 (24)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -28648,6 +28760,10 @@ PrefabInstance:
       value: IntWoodFloor01 (12)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -28790,6 +28906,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -29686,6 +29806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -29759,6 +29883,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -30109,6 +30237,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30510,6 +30642,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -32805,6 +32941,10 @@ PrefabInstance:
       value: IntWoodFloor01 (33)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -32955,6 +33095,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_Name
       value: StoneFloor01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33530,6 +33674,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -34206,6 +34354,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -34920,6 +35072,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -40435,6 +40591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -40956,6 +41116,10 @@ PrefabInstance:
       value: IntWoodFloor01 (27)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -41032,6 +41196,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -41282,6 +41450,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43367,6 +43539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneFloor01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.6
@@ -45324,6 +45500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -46499,6 +46679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneFloor01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.1
@@ -47238,6 +47422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -47377,6 +47565,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -53640,6 +53832,10 @@ PrefabInstance:
       value: IntWoodFloor01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -54814,6 +55010,10 @@ PrefabInstance:
       value: IntWoodFloor01 (35)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -54890,6 +55090,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -57435,6 +57639,10 @@ PrefabInstance:
       value: IntWoodFloor01 (17)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -57573,6 +57781,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -58077,6 +58289,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -58673,6 +58889,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -61182,7 +61402,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 954125406842968967, guid: 6218b47e84ed242f1b0194496ca1317e, type: 3}
+    - {fileID: 138877401606556654, guid: 6218b47e84ed242f1b0194496ca1317e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -61214,6 +61436,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_Name
       value: StoneFloor01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5c9c14473dd10b49b18c7451afadcce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61696,6 +61922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -61910,6 +62140,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -62476,6 +62710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -62676,6 +62914,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -65259,6 +65501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -65966,6 +66212,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -66841,6 +67091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -67130,6 +67384,10 @@ PrefabInstance:
       value: IntWoodFloor01 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -67206,6 +67464,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -67966,6 +68228,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -68792,6 +69058,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -74427,6 +74697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodStairs
       objectReference: {fileID: 0}
+    - target: {fileID: 1062605917797214, guid: e659ac473f42b244dbbecd69649dcabe, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4635900903727972, guid: e659ac473f42b244dbbecd69649dcabe, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -75152,6 +75426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntWoodFloor01 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -75735,6 +76013,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -76872,6 +77154,10 @@ PrefabInstance:
       value: IntWoodFloor01 (34)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -77777,6 +78063,10 @@ PrefabInstance:
       value: IntWoodFloor01 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -77923,6 +78213,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -79386,6 +79680,10 @@ PrefabInstance:
       value: IntWoodFloor01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -79462,6 +79760,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -79729,6 +80031,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x
@@ -81062,6 +81368,10 @@ PrefabInstance:
       value: IntWoodFloor01 (23)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -81394,6 +81704,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -82204,6 +82518,10 @@ PrefabInstance:
       value: IntWoodFloor01 (43)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -82649,6 +82967,10 @@ PrefabInstance:
       value: IntWoodFloor01 (28)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -82788,6 +83110,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -83062,6 +83388,10 @@ PrefabInstance:
       value: IntWoodFloor01 (26)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -83276,6 +83606,10 @@ PrefabInstance:
       value: IntWoodFloor01 (19)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -83485,6 +83819,10 @@ PrefabInstance:
       value: IntWoodFloor01 (39)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -83627,6 +83965,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -89384,6 +89726,10 @@ PrefabInstance:
       value: IntWoodFloor01 (40)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -89460,6 +89806,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_Name
       value: IntWoodFloor01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe94eb06e4d40a84582ca0898b264da1, type: 3}
       propertyPath: m_LocalScale.x

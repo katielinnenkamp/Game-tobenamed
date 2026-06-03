@@ -8,6 +8,7 @@ public class questGiver : Useable
     public Dialogue dialogue;
     public Transform playerCamera;
     public float interactDistance = 3f;
+    private AudioManager _audioManager;
 
     [SerializeField]
     private Item reward;
@@ -52,6 +53,7 @@ public class questGiver : Useable
             Instantiate(reward.item_prefab,
                     rewardspot.transform.position,
                     Quaternion.identity);
+            _audioManager.PlayRandomDrop();
         }
         else if (key)
         {

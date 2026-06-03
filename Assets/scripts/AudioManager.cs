@@ -57,7 +57,39 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    //TODO: CHANGE WALKING SFX BASED ON GROUND TYPE
+    public void PlayWalking(string groundType)
+    {
+
+        AudioSource toPlay = groundType switch
+        {
+            "Wood"   => m_woodwalk,
+            "Carpet" => m_carpetwalk,
+            "Stone"   => m_hardwalk,
+            "Grass"  => m_grasswalk,
+            "Untagged" => m_hardwalk,
+            _        => m_hardwalk  // fallback
+        };
+
+        if (!toPlay.isPlaying)
+            toPlay.Play();
+    }
+
+    public void StopWalking()
+    {
+        m_woodwalk.Stop();
+        m_carpetwalk.Stop();
+        m_hardwalk.Stop();
+        m_grasswalk.Stop();
+    }
+
+    public void PauseWalking()
+    {
+        m_woodwalk.Pause();
+        m_carpetwalk.Pause();
+        m_hardwalk.Pause();
+        m_grasswalk.Pause();
+    }
+
     //TODO: GHOST TALK SFX
 
 }
