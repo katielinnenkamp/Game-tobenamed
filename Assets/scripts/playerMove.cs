@@ -61,6 +61,7 @@ public class playerMove : MonoBehaviour
 
     public MyInputActions controls;
     private AudioManager _audioManager;
+    private AudioSource m_Splash;
 
     private float yrotation;
 
@@ -74,6 +75,8 @@ public class playerMove : MonoBehaviour
 
         _audioManager = FindFirstObjectByType<AudioManager>();
         if (_audioManager == null) Debug.LogError("_audioManager is NULL");
+        m_Splash = GameObject.Find("Splash").GetComponent<AudioSource>();
+        if (m_Splash == null) Debug.LogError("m_Splash is NULL");
 
         yrotation = transform.rotation.eulerAngles.y;
         lookup = 0f;
@@ -194,6 +197,7 @@ public class playerMove : MonoBehaviour
         {
             if (collision.collider.gameObject.tag.Equals("Water") == true){
                 Debug.Log("fell in water");
+                m_Splash.Play();
                 transform.position = new Vector3(-16.23f, 1f, -1.25f);
             }
             return true;
@@ -268,6 +272,7 @@ public class playerMove : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Water") == true){
             Debug.Log("fell in water");
+            m_Splash.Play();
             transform.position = new Vector3(-16.23f, 1f, -1.25f);
         }
     }
