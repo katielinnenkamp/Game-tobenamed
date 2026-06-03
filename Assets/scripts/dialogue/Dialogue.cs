@@ -11,7 +11,13 @@ public class Dialogue : MonoBehaviour
     public bool isRunning = false;
 
     private int index;
+    private AudioManager _audioManager;
 
+    void Awake()
+    {
+        _audioManager = FindFirstObjectByType<AudioManager>();
+        if (_audioManager == null) Debug.LogError("_audioManager is NULL");        
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +53,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        _audioManager.Talk();
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;

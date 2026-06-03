@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,7 +29,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource m_DoorClose;
 
     [Header("Misc")]
-    [SerializeField] private AudioSource m_Splash;
+    [SerializeField] private AudioSource m_Splash; 
+    [SerializeField] private AudioSource m_MenuMove;    
+    [SerializeField] private AudioSource m_ButtonClick;
+
+
+
+    [Header("Ghost")]
+    [SerializeField] private AudioSource m_GhostFloat;
+    [SerializeField] private AudioSource m_GhostTalk;
 
     public void PlayRandomPickup()
     {
@@ -93,6 +102,10 @@ public class AudioManager : MonoBehaviour
         m_grasswalk.Pause();
     }
 
-    //TODO: GHOST TALK SFX
+    public void Talk()
+    {
+        m_GhostTalk.pitch = Random.Range(0.7f, 1.2f);
+        m_GhostTalk.Play();
+    }
 
 }

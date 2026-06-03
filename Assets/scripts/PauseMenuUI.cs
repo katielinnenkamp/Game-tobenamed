@@ -7,6 +7,8 @@ public class PauseMenuUI : MonoBehaviour
 
     public GameObject pauseMenu;
     public playerMove player;
+    private AudioManager _audioManager;
+    private AudioSource m_Menu;
 
     private bool paused = false;
 
@@ -14,7 +16,12 @@ public class PauseMenuUI : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        GameIsPaused = false;        
+        _audioManager = FindFirstObjectByType<AudioManager>();
+        if (_audioManager == null) Debug.LogError("_audioManager is NULL");
+        m_Menu = GameObject.Find("Menu").GetComponent<AudioSource>();
+        if (m_Menu == null) Debug.LogError("m_Menu is NULL");
+
     }
 
     void Update()
@@ -29,10 +36,12 @@ public class PauseMenuUI : MonoBehaviour
     {
         if (paused)
         {
+            m_Menu.Play();
             ContinueGame();
         }
         else
         {
+            m_Menu.Play();
             PauseGame();
         }
     }
@@ -74,7 +83,7 @@ public class PauseMenuUI : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
+        m_Menu.Play();
         SceneManager.LoadScene("BetaBuildMenu");
     }
 }
