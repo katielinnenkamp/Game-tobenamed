@@ -6,6 +6,7 @@ public class libraryPuzzleManager : MonoBehaviour
     private pedestal[] pedestals;
     private bool[] corrects;
     public GameObject key;
+    public GameObject floor;
 
     void Awake()
     {
@@ -53,6 +54,8 @@ public class libraryPuzzleManager : MonoBehaviour
 
     private void PuzzleComplete()
     {
-        key.SetActive(true);        
+        key.SetActive(true);
+        Collider floorCollider = floor.GetComponent<Collider>();
+        floorCollider.enabled = false;
     }
 }
