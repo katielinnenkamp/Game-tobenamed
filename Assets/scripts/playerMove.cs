@@ -18,7 +18,7 @@ public class playerMove : MonoBehaviour
     //used in "collide and slide" collision calculations
     private Bounds bounds;
 
-    private float sensitivity = 1f; //sensitivity of mouse movement
+    private float sensitivity = 0.5f; //sensitivity of mouse movement
     private bool _isLocked = true;
 
     private UIDocument openedmenu;
@@ -195,17 +195,37 @@ public class playerMove : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, Vector3.down, out var collision, 1.0625f))
         {
-            if (collision.collider.gameObject.tag.Equals("Water") == true){
-                Debug.Log("fell in water");
-                m_Splash.Play();
-                transform.position = new Vector3(-16.23f, 1f, -1.25f);
+            if(collision.collider.gameObject.CompareTag("Water"))
+            {
+                HitHazard();
+                return false;
             }
             return true;
         }
-        else
+        return false; 
+    }
+
+    private bool dying = false;
+
+    private void HitHazard()
+    {
+        if(dying)
         {
-            return false;
+            return;
         }
+        dying = true;
+        Debug.Log("died");
+        if(m_Splash != null)
+        {
+            m_Splash.Play();
+        }
+        parkourmanager.instance.LoseLife();
+        Invoke(nameof(ResetDying), 0.25f);
+    }
+
+    private void ResetDying()
+    {
+        dying = false;
     }
 
     string GetSurfaceTag()
@@ -270,10 +290,8 @@ public class playerMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag.Equals("Water") == true){
-            Debug.Log("fell in water");
-            m_Splash.Play();
-            transform.position = new Vector3(-16.23f, 1f, -1.25f);
+        if (collision.gameObject.CompareTag("Water")){
+            HitHazard();
         }
     }
     #endregion

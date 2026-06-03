@@ -103,7 +103,10 @@ public class anomalymanager : MonoBehaviour
                 door.transform.localPosition = Vector3.MoveTowards(door.transform.localPosition, dooropenpos, doorspeed * Time.deltaTime);
                 if((door.transform.localPosition - dooropenpos).sqrMagnitude <= 0.01f)
                 {
+                    CancelInvoke(nameof(HideFloorMessage));
                     anomalytext.ShowMessage("Current Floor: B" + currentfloor);
+                    Invoke(nameof(HideFloorMessage), 2f);
+
                     ChangeState(amstate.IDLE);
                 }
                 break;
@@ -115,6 +118,11 @@ public class anomalymanager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    private void HideFloorMessage()
+    {
+        anomalytext.HideMessage();
     }
 
     public void CreateAnomaly()
